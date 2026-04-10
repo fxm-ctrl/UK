@@ -1,0 +1,107 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.5; 
+    padding:7px; 
+}
+
+.container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+h1 { 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 30px; 
+    color: #333; 
+}
+
+.questionnaire {
+    margin-bottom: 30px;
+}
+
+.question {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.question-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+select {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.find-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+}
+
+.find-btn:hover {
+    background: #0056b3;
+}
+
+#result {
+    margin-top: 30px;
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 12px 15px; 
+    text-align: left; 
+}
+
+th { 
+    background-color: #f2f2f2; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
+.continent-highlight {
+    background: #e3f2fd;
+    font-weight: bold;
+}
+
+.university-list {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+#result:empty::before {
+    content: "Complete all 10 questions to see recommendation";
+    display: block;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}

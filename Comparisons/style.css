@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  padding: 7px;
+}
+
+select, button {
+  padding: 10px;
+  margin: 10px 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #333;
+  color: white;
+}
+
+.highlight {
+  background-color: #d4edda;
+}

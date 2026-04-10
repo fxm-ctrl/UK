@@ -1,0 +1,83 @@
+
+.intro-div {
+    position:relative;
+    background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/Oxford_PAX003429-01_SuperRes_0.JPG?itok=YWJfSzao);
+    background-size: cover;
+    height: auto;
+    padding:200px;
+}
+
+.words {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    transform: translateY(-220px);
+}
+
+.container {
+    display: flex;
+    position:relative;
+    
+}
+
+
+
+.chatbot {
+    background-color:rgb(247, 235, 218);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    color: darkblue;
+    font-size: 18px;
+    transform:translateX(100px)
+
+}
+
+
+.considerations {
+    text-align: center;
+    background-color:powderblue ;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    color: black;
+    font-size: 18px;
+    transform:translateX(100px)
+ 
+
+}
+
+.globe {
+    transform: translateY(-45px);  
+}
+
+.resources {
+    text-align: center;
+    background-color: rgb(221, 236, 250);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    color: black;
+    font-size: 18px;
+    transform:translateX(100px)
+
+}
+
+.image {
+    padding: 20px;
+}
+
+.promotion {
+    transform: translateX(100px);
+    padding: 10px;
+}
+
+.international {
+    transform: translateX(200px);
+    padding:30px;
+}
+;
+
+    

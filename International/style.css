@@ -1,0 +1,111 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.5; 
+    padding: 10px; 
+}
+
+.container {
+    align-items: center;
+}
+
+h1 {  
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    color: #333; 
+}
+
+#countrySelect { 
+    width: 250px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    margin-bottom: 20px; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    background-color: white; 
+    padding: 12px 15px; 
+    text-align: left;
+}
+
+th { 
+    background-color: #f2f2f2; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
+td { 
+    font-size: 14px; 
+}
+
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+tr:hover { background-color: #f5f5f5; }
+
+#compare:empty::before {
+    content: "Select a country to view data";
+    display: block;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+    transform:translate(190px,-80px);
+}
+
+/* COST SECTION */
+.cost-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+.cost-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#costTable table {
+    margin-bottom: 20px;
+}
+
+#costTable th {
+    background-color: #e9ecef;
+}
+
+.cost-input {
+    width: 80px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: right;
+}
+
+.totals {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.total-monthly, .total-yearly {
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+}
+
+.button {
+    transform: translate(230px,-50px);
+}

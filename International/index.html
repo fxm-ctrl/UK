@@ -1,0 +1,129 @@
+<body> <!--Navigation bar CSS--> 
+    <div class="navbar-div">
+        <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: burlywood;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+</div>
+</body>
+
+<body style="background-color:white;"> <!--Navigation bar HTML-->
+
+<div class="navbar">
+  <a href="/UK/index.html">Home</a>
+  <a href="/UK/Continent/index.html">University Finder</a>
+  <a href="/UK/Pages/index.html">AI Advisor</a>
+  <a href="/UK/Comparisons/index.html">Versus</a>
+  <a href="/UK/International/index.html">International Center</a> 
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Visa & Living Costs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<style> 
+     body {background-image: url("https://www.colorhexa.com/f3f3fe.png")}
+</style>
+
+<body>
+    <div class="container">
+        <br>
+        <img src="/UK/Images/intcenterpage.png" width="1000px">
+        <br>
+        <br>
+        <div class="button">
+          <select id="countrySelect">
+            <option value="">Choose a country...</option>
+          </select>
+        </div>
+        
+        <div id="compare"></div>
+        
+        <!-- FIXED: Added style="display: none;" -->
+        <div class="cost-section" style="display: none;" id="costSection">
+            <h2>Average Cost of Living Breakdown</h2>
+            <p>Adjust values as necessary!</p>
+            <div id="costTable"></div>
+            <div class="totals">
+                <div class="total-monthly">Monthly Total: $<span id="monthlyTotal">0</span></div>
+                <div class="total-yearly">Yearly Total: $<span id="yearlyTotal">0</span></div>
+            </div>
+            <div id="insight" class="insight"></div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

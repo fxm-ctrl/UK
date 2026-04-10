@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Compare Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style> 
+#selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #f2f2f2;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.remove-btn {
+  border: none;
+  background: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
+</style>
+
+<style> 
+     body {background-image: url("https://www.colorhexa.com/f3f3fe.png")}
+</style>
+
+<body> <!--Navigation bar CSS--> 
+    <div class="navbar-div">
+        <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: burlywood;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+</div>
+</body>
+
+<body style="background-color:white;"> <!--Navigation bar HTML-->
+
+<div class="navbar">
+  <a href="/UK/index.html">Home</a>
+  <a href="/UK/Continent/index.html">University Finder</a>
+  <a href="/UK/Pages/index.html">AI Advisor</a>
+  <a href="/UK/Comparisons/index.html">Versus</a>
+  <a href="/UK/International/index.html">International Center</a> 
+</div>
+
+
+</body>
+<body>
+
+<h1>Versus</h1>
+
+<p>Select as many universities as you would like and compare them!</p>
+
+<select id="uniSelect"></select>
+<button onclick="addUniversity()">Add</button>
+
+<div id="selected"></div>
+<div id="compare"></div>
+
+<script src="universities.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

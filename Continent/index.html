@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<body> <!--Navigation bar CSS--> 
+    <div class="navbar-div">
+        <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: burlywood;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+</div>
+</body>
+
+<body> <!--Navigation bar CSS--> 
+    <div class="navbar-div">
+        <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: burlywood;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+</div>
+</body>
+
+<style> 
+     body {background-image: url("https://www.colorhexa.com/f3f3fe.png")}
+</style>
+
+
+<body style="background-color:white;"> <!--Navigation bar HTML-->
+
+<div class="navbar">
+  <a href="/UK/index.html">Home</a>
+  <a href="/UK/Continent/index.html">University Finder</a>
+  <a href="/UK/Pages/index.html">AI Advisor</a>
+  <a href="/UK/Comparisons/index.html">Versus</a>
+  <a href="/UK/International/index.html">International Center</a> 
+</div>
+</div>
+
+</body>
+
+<br>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Continent Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="name">
+        <h1 style="font-size:80px">University Finder</h1>
+        </div>
+        
+        <div id="questionnaire" class="questionnaire">
+            <div class="question" id="q1">
+                <div class="question-text">1. What's your climate preference?</div>
+                <select id="climate">
+                    <option value="">Choose...</option>
+                    <option value="warm">Warm/Tropical </option>
+                    <option value="temperate">Temperate/Moderate </option>
+                    <option value="cold">Cold/Snowy </option>
+                </select>
+            </div>
+            
+            <div class="question" id="q2" style="display:none;">
+                <div class="question-text">2. Landscape preference?</div>
+                <select id="landscape">
+                    <option value="">Choose...</option>
+                    <option value="urban">Urban/City </option>
+                    <option value="coastal">Coastal/Beach </option>
+                    <option value="mountains">Mountains/Nature </option>
+                </select>
+            </div>
+            
+            <div class="question" id="q3" style="display:none;">
+                <div class="question-text">3. Budget per year (tuition + living)?</div>
+                <select id="budget">
+                    <option value="">Choose...</option>
+                    <option value="low"><$10,000 💰</option>
+                    <option value="medium">$10k-$25k 💵</option>
+                    <option value="high">$25k+ 💎</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q4" style="display:none;">
+                <div class="question-text">4. Language of instruction?</div>
+                <select id="language">
+                    <option value="">Choose...</option>
+                    <option value="english">English only</option>
+                    <option value="multi">Multi-language</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q5" style="display:none;">
+                <div class="question-text">5. Study duration preference?</div>
+                <select id="duration">
+                    <option value="">Choose...</option>
+                    <option value="undergrad">Undergraduate</option>
+                    <option value="postgrad">Postgraduate/Masters</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q6" style="display:none;">
+                <div class="question-text">6. Work rights important?</div>
+                <select id="work">
+                    <option value="">Choose...</option>
+                    <option value="yes">Yes, need part-time work 💼</option>
+                    <option value="no">No, focus on studies 📚</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q7" style="display:none;">
+                <div class="question-text">7. Post-study work visa?</div>
+                <select id="poststudy">
+                    <option value="">Choose...</option>
+                    <option value="important">Very important</option>
+                    <option value="optional">Nice to have</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q8" style="display:none;">
+                <div class="question-text">8. Safety level preference?</div>
+                <select id="safety">
+                    <option value="">Choose...</option>
+                    <option value="high">Very safe</option>
+                    <option value="medium">Average</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q9" style="display:none;">
+                <div class="question-text">9. Cultural experience?</div>
+                <select id="culture">
+                    <option value="">Choose...</option>
+                    <option value="diverse">Very diverse</option>
+                    <option value="homogeneous">More uniform</option>
+                </select>
+            </div>
+            
+            <div class="question" id="q10" style="display:none;">
+                <div class="question-text">10. Tourism Quality?</div>
+                <select id="proximity">
+                    <option value="">Choose...</option>
+                    <option value="near">Lots of spots</option>
+                    <option value="far">Don't mind</option>
+                </select>
+                <button onclick="generateRecommendation()" class="find-btn">Find My Continent!</button>
+            </div>
+        </div>
+        
+        <div id="result" style="display:none;"></div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
