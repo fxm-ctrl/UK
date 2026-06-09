@@ -1,83 +1,99 @@
-
 .intro-div {
-    position:relative;
-    background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/Oxford_PAX003429-01_SuperRes_0.JPG?itok=YWJfSzao);
+    position: relative;
+    background-image: url("Images/unibackground.png");
     background-size: cover;
-    height: auto;
-    padding:200px;
+    background-position: center 30%;
+
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    text-align: center;
+    padding-top: 0px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .words {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
-    transform: translateY(-220px);
+    color: white;
+    padding: 20px;
 }
 
 .container {
     display: flex;
-    position:relative;
-    
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 
-
-.chatbot {
-    background-color:rgb(247, 235, 218);
+.chatbot,
+.considerations,
+.resources {
     border-radius: 25px;
     padding: 20px;
-    margin: 30px;
-    width: 300px;
-    color: darkblue;
+    margin: 10px;
+    max-width: 300px;
+    width: 100%;
     font-size: 18px;
-    transform:translateX(100px)
-
+    box-sizing: border-box;
 }
 
+.chatbot {
+    background-color: rgb(247, 235, 218);
+    color: darkblue;
+}
 
 .considerations {
     text-align: center;
-    background-color:powderblue ;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 30px;
-    width: 300px;
+    background-color: powderblue;
     color: black;
-    font-size: 18px;
-    transform:translateX(100px)
- 
-
-}
-
-.globe {
-    transform: translateY(-45px);  
 }
 
 .resources {
     text-align: center;
     background-color: rgb(221, 236, 250);
-    border-radius: 25px;
-    padding: 20px;
-    margin: 30px;
-    width: 300px;
     color: black;
-    font-size: 18px;
-    transform:translateX(100px)
+}
 
+.globe {
+    display: block;
+    margin: 0 auto;
 }
 
 .image {
     padding: 20px;
+    text-align: center;
 }
 
 .promotion {
-    transform: translateX(100px);
     padding: 10px;
+    text-align: center;
 }
 
 .international {
-    transform: translateX(200px);
-    padding:30px;
+    padding: 30px;
+    text-align: center;
 }
-;
 
-    
+
+@media (max-width: 768px) {
+    .words {
+        font-size: 2rem;
+    }
+
+    .intro-div {
+        min-height: 350px;
+        padding: 20px;
+    }
+
+    .chatbot,
+    .considerations,
+    .resources {
+        max-width: 90%;
+    }
+}
