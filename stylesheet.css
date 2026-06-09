@@ -21,6 +21,7 @@
     padding: 20px;
 }
 
+
 .container {
     display: flex;
     justify-content: center;
@@ -30,6 +31,9 @@
     padding: 20px;
 }
 
+.infobot {
+    transform: translateX(-13px);
+}
 
 .chatbot,
 .considerations,
@@ -63,6 +67,7 @@
 .globe {
     display: block;
     margin: 0 auto;
+    transform: translateY(-30px);
 }
 
 .image {
@@ -96,4 +101,6 @@
     .resources {
         max-width: 90%;
     }
+
+
 }
