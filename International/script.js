@@ -1,6 +1,9 @@
 let selectedCountry = null;
 let costInputs = {};
 
+// FX RATE (USD → RM, approx 2026 baseline)
+const FX_RATE = 4.7;
+
 // Load dropdown
 function loadDropdown() {
   const select = document.getElementById("countrySelect");
@@ -18,7 +21,7 @@ function loadDropdown() {
 document.getElementById("countrySelect").addEventListener("change", function() {
   const index = parseInt(this.value);
   
-  if (index === "" || isNaN(index)) {
+  if (this.value === "" || isNaN(index)) {
     document.getElementById("compare").innerHTML = "";
     document.getElementById("costSection").style.display = "none";
     selectedCountry = null;
@@ -31,11 +34,10 @@ document.getElementById("countrySelect").addEventListener("change", function() {
   document.getElementById("costSection").style.display = "block";
 });
 
-// Visa table
+// Visa table (UPDATED - no financialReq)
 function renderVisaTable() {
   const features = [
     { key: "visaType", label: "Visa Type" },
-    { key: "financialReq", label: "Financial Req (USD)" },
     { key: "processingDays", label: "Processing Days" },
     { key: "workHoursWeek", label: "Work Hours/Week" },
     { key: "acceptanceRate", label: "Approval Rate" },
@@ -47,10 +49,16 @@ function renderVisaTable() {
 
   features.forEach(f => {
     let val;
-    if (f.key === "financialReq") val = "$" + Math.round(selectedCountry.financialReq).toLocaleString();
-    else if (f.key === "acceptanceRate") val = (selectedCountry.acceptanceRate * 100).toFixed(1) + "%";
-    else if (f.key === "workHoursWeek") val = selectedCountry.workHoursWeek === 0 ? "None" : Math.round(selectedCountry.workHoursWeek);
-    else val = selectedCountry[f.key];
+
+    if (f.key === "acceptanceRate") {
+      val = (selectedCountry.acceptanceRate * 100).toFixed(1) + "%";
+    } 
+    else if (f.key === "workHoursWeek") {
+      val = selectedCountry.workHoursWeek === 0 ? "None" : Math.round(selectedCountry.workHoursWeek);
+    } 
+    else {
+      val = selectedCountry[f.key];
+    }
 
     html += `<tr><td>${f.label}</td><td>${val}</td></tr>`;
   });
@@ -59,20 +67,23 @@ function renderVisaTable() {
   document.getElementById("compare").innerHTML = html;
 }
 
-// Cost of living table + calculator
+// Cost table (RM)
 function renderCostTable() {
   const costs = selectedCountry.livingCosts;
   costInputs = { ...costs };
   
-  let html = "<table><tr><th>Category</th><th>Monthly Cost ($)</th></tr>";
+  let html = "<table><tr><th>Category</th><th>Monthly Cost (RM)</th></tr>";
   
   Object.keys(costs).forEach(category => {
     html += `
       <tr>
         <td>${category.charAt(0).toUpperCase() + category.slice(1)}</td>
-        <td><input type="number" class="cost-input" value="${costs[category]}" 
-                   onchange="updateCosts('${category}', this.value)" 
-                   onkeyup="updateCosts('${category}', this.value)"></td>
+        <td>
+          <input type="number" class="cost-input"
+            value="${costs[category] * FX_RATE}"
+            onchange="updateCosts('${category}', this.value)"
+            onkeyup="updateCosts('${category}', this.value)">
+        </td>
       </tr>
     `;
   });
@@ -82,23 +93,19 @@ function renderCostTable() {
   updateTotals();
 }
 
-// Update individual cost
+// Update cost
 function updateCosts(category, value) {
   costInputs[category] = parseFloat(value) || 0;
   updateTotals();
 }
 
-// FIXED: Yearly total = living costs ONLY (12 × monthly living costs)
+// Totals (RM only)
 function updateTotals() {
   const totalMonthlyLiving = Object.values(costInputs).reduce((sum, val) => sum + val, 0);
-  const totalYearlyLiving = totalMonthlyLiving * 12; // LIVING COSTS ONLY
+  const totalYearlyLiving = totalMonthlyLiving * 12;
   
-  document.getElementById("monthlyTotal").textContent = Math.round(totalMonthlyLiving);
-  document.getElementById("yearlyTotal").textContent = Math.round(totalYearlyLiving).toLocaleString();
-  
-  const rentPercent = totalMonthlyLiving > 0 ? (costInputs.rent / totalMonthlyLiving * 100).toFixed(0) : 0;
-  const foodPercent = totalMonthlyLiving > 0 ? (costInputs.food / totalMonthlyLiving * 100).toFixed(0) : 0;
-  
+  document.getElementById("monthlyTotal").textContent = "RM " + Math.round(totalMonthlyLiving).toLocaleString();
+  document.getElementById("yearlyTotal").textContent = "RM " + Math.round(totalYearlyLiving).toLocaleString();
 }
 
 // Init
