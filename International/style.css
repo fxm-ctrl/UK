@@ -4,12 +4,9 @@ body {
     font-family: Arial, sans-serif; 
     line-height: 1.5; 
     padding: 10px; 
-    background: #fff;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -20,10 +17,10 @@ h1 {
 }
 
 #countrySelect { 
-    width: 260px; 
+    width: 250px; 
     padding: 10px; 
     border: 1px solid #ccc; 
-    border-radius: 5px; 
+    border-radius: 4px; 
     font-size: 14px; 
     margin-bottom: 20px; 
 }
@@ -32,11 +29,11 @@ table {
     width: 100%; 
     border-collapse: collapse; 
     margin-top: 10px; 
-    background: #fff;
 }
 
 th, td { 
     border: 1px solid #ddd; 
+    background-color: white; 
     padding: 12px 15px; 
     text-align: left;
 }
@@ -59,9 +56,9 @@ tr:hover { background-color: #f5f5f5; }
     content: "Select a country to view data";
     display: block;
     padding: 40px;
-    color: #777;
+    color: #666;
     font-style: italic;
-    text-align: center;
+    transform:translate(190px,-80px);
 }
 
 /* COST SECTION */
@@ -69,7 +66,6 @@ tr:hover { background-color: #f5f5f5; }
     margin-top: 40px;
     padding-top: 30px;
     border-top: 2px solid #eee;
-    width: 100%;
 }
 
 .cost-section h2 {
@@ -87,17 +83,17 @@ tr:hover { background-color: #f5f5f5; }
 }
 
 .cost-input {
-    width: 100px;
+    width: 80px;
     padding: 6px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     font-size: 13px;
     text-align: right;
 }
 
 .totals {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-bottom: 15px;
     font-weight: bold;
     font-size: 16px;
@@ -107,9 +103,29 @@ tr:hover { background-color: #f5f5f5; }
     padding: 12px 20px;
     background: #f8f9fa;
     border-radius: 6px;
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #007bff;
 }
 
 .button {
     transform: translate(230px,-50px);
+}
+
+/* Ensure RM formatting doesn't break layout */
+#monthlyTotal, #yearlyTotal {
+    white-space: nowrap;
+}
+
+/* Prevent overflow when RM values grow */
+.totals {
+    flex-wrap: wrap;
+}
+
+/* Improve alignment when numbers become larger (RM formatting) */
+.total-monthly, .total-yearly {
+    min-width: 180px;
+}
+
+/* Input stability for RM values */
+.cost-input {
+    width: 100px;
 }
